@@ -1,10 +1,10 @@
 version: "3"
 
-networks:
+# networks:
 
-  default:
-    name: kafka-spark-network
-    external: true
+#   default:
+#     name: kafka-spark-network
+#     external: true
 
 services:
 
