@@ -1,5 +1,10 @@
+# airflow and dev 
 kafka
 pandas
 "gql[all]"
 apache-airflow-providers-google
 dbt-bigquery==1.0.0
+requests-oauthlib
+
+# testing
+responses
