@@ -1,0 +1,13 @@
+# etl
+apache-airflow
+apache-airflow-providers-google
+confluent-kafka
+kafka-python
+dbt-bigquery
+
+# dev/tests
+pytest
+pytest-icdiff
+mypy
+pylint
+requests
