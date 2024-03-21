@@ -56,7 +56,7 @@ x-airflow-common:
   # changed from original for custom project setup
   build: 
     context: .
-    dockerfile: ./Dockerfile
+    # dockerfile: ./Dockerfile
   environment:
     &airflow-common-env
     AIRFLOW__CORE__EXECUTOR: CeleryExecutor
@@ -265,6 +265,15 @@ services:
       - bash
       - -c
       - airflow
+
+  test:
+    env_file: environment.env
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    entrypoint: pytest
 
   # You can enable flower by adding "--profile flower" option e.g. docker-compose --profile flower up
   # or by explicitly targeted on the command line e.g. docker-compose up flower.
