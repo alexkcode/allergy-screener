@@ -1,5 +1,4 @@
 import requests, requests_oauthlib
-from kafka import KafkaProducer
 
-def scrape():
+def scrape_yelp_reviews():
     pass
