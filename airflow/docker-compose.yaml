@@ -267,9 +267,9 @@ services:
       - airflow
 
   test:
-    # env_file: environment.env
-    # environment:
-    #   - PYTHONDONTWRITEBYTECODE=1
+    env_file: environment.env
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
     build:
       dockerfile: ./Dockerfile
       context: .
