@@ -270,6 +270,7 @@ services:
     env_file: environment.env
     environment:
       - PYTHONDONTWRITEBYTECODE=1
+      - API_KEY_FILE=${API_KEY_FILE}
     build:
       dockerfile: ./Dockerfile
       context: .
