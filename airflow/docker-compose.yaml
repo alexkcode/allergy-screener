@@ -270,7 +270,9 @@ services:
     env_file: environment.env
     environment:
       - PYTHONDONTWRITEBYTECODE=1
-      - API_KEY_FILE=${API_KEY_FILE}
+      - YELP_API_KEY_FILE=/run/secrets/yelp_api_key
+    secrets:
+      - yelp_api_key
     build:
       dockerfile: ./Dockerfile
       context: .
@@ -300,3 +302,7 @@ services:
 
 volumes:
   postgres-db-volume:
+
+secrets:
+  yelp_api_key:
+    file: yelp_api.key
