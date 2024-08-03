@@ -17,7 +17,7 @@ def get_business_search_response(response_file):
 
     with open(response_file, 'w') as json_file:
         json.dump(response, json_file, indent=4) 
-    
+
 
 def mock_business_search_yelp_response():
     response_file = 'yelp_business_search_response.json'
